@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Virtual Try-On</title>
+    <link rel="stylesheet" href="IP_MINI\static\style.css">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+form, .container {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    width: 350px;
+    box-sizing: border-box;
+}
+
+h2 {
+    text-align: center;
+    color: #333333;
+    margin-bottom: 25px;
+}
+
+h3 {
+    text-align: center;
+    color: #555555;
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="file"],
+select {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    border: none;
+    color: #e93790;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+p {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+img {
+    display: block;
+    margin: 10px auto;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}
+footer {
+            background-color: #ff5c5c;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: underline;
+            margin: 0 5px;
+        }
+
+        footer a:hover {
+            text-decoration: none;
+        }
+</style>
+</head>
+
+<body>
+
+<form action="signup.php" method="POST">
+  <h2>Sign Up</h2>
+  <input type="text" name="username" placeholder="Username" required><br>
+  <input type="password" name="password" placeholder="Password" required><br>
+  <button type="submit">Create Account</button>
+  <p>Already have an account? <a href="login.html">Login</a></p>
+</form>
+<footer>
+        <p>© 2025 Click to Wear | All Rights Reserved</p>
+        <p>
+            Follow us on 
+            <a href="#">Instagram</a> |
+            <a href="#">Facebook</a> |
+            <a href="#">Twitter</a>
+        </p>
+    </footer>
+</body>
+</html>

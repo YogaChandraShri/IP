@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click to Wear</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <style>
+        
+        header {
+            background-color: #ff5c5c;
+            text-align: center;
+            align-items: center;
+            justify-content: end;
+            padding: 15px 0px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            width: 100%;
+            height: 200px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #e0e0e0;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        h2 {
+            margin: 10px 0;
+            font-size: 32px;
+        }
+
+        h3 {
+            margin: 5px 0 30px 0;
+            font-size: 28px;
+            color: #903612;
+        }
+
+        .out {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .in_1, .in_2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        img {
+            width: 300px;
+            height: 300px;
+            
+            border-radius: 10px;
+            border: 2px solid #ddd;
+        }
+
+        .try-another-btn {
+            display: inline-block;
+            background-color: #967feb;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .try-another-btn:hover {
+            background-color: #7c66d0;
+        }
+
+        footer {
+            background-color: #ff5c5c;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: underline;
+            margin: 0 5px;
+        }
+
+        footer a:hover {
+            text-decoration: none;
+        }
+
+       
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="{{ url_for('home_page') }}">🏠 Home</a>
+            <a href="{{ url_for('design') }}">Design</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+            <a href="{{ url_for('home_page') }}">Log Out</a>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <h2>Welcome, {{ username }}!</h2>
+        <h3>Style: {{ style }}</h3>
+
+        <div class="out">
+            <div class="in_1">
+                <p>Input Image:</p>
+                <img src="{{ url_for('static', filename='uploads/' + input_image) }}" alt="Input Image">
+            </div>
+            <div class="in_2">
+                <p>Output Image:</p>
+                <img src="{{ url_for('static', filename='uploads/' + output_image) }}" alt="Output Image">
+            </div>
+        </div>
+
+        <a href="{{ url_for('home_login', username=username) }}" class="try-another-btn">Try another</a>
+    </div>
+
+    <footer>
+        <p>© 2025 Click to Wear | All Rights Reserved</p>
+        <p>
+            Follow us on
+            <a href="#">Instagram</a> |
+            <a href="#">Facebook</a> |
+            <a href="#">Twitter</a>
+        </p>
+    </footer>
+</body>
+</html>
+<script>
+  // Scroll to top when page loads
+  window.onload = function () {
+      window.scrollTo(0, 0);
+  };
+</script>

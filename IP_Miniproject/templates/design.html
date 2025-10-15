@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Try-On</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+            header {
+    background-color: #ff5c5c;
+    text-align: center;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    width: 100%;
+    height: 70px;
+}
+
+.site-title {
+    font-size: 28px;
+    color: #333;
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 10px 0 0 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #0056b3;
+}
+
+footer {
+            background-color: #ff5c5c;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: underline;
+            margin: 0 5px;
+        }
+
+        footer a:hover {
+            text-decoration: none;
+        }
+        
+    </style>
+</head>
+
+ <header>
+        <div class="header-containor">
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home_page') }}">🏠 Home</a></li>
+                <li><a href="{{ url_for('design') }}">Design</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="{{ url_for('home') }}">Log Out</a></li>
+            </ul>
+        </nav>
+        <div>
+    </header>
+
+<body>
+    <h2>Welcome, {{ username }}!</h2>
+    <div class="container">
+    <form action="/predict" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="username" value="{{ username }}">
+        <input placeholder="Upload your dress material here" type="file" name="file" required>
+        <select  name="style" required>
+            <option value="chudidhar">Chudidhar</option>
+            <option value="Tshirt">T-shirt</option>
+            <option value="frock">Frock</option>
+        </select>
+        <button type="submit">Generate Output</button>
+    </form>
+    </div>
+</body>
+<footer>
+        <p>© 2025 Click to Wear | All Rights Reserved</p>
+        <p>
+            Follow us on 
+            <a href="#">Instagram</a> |
+            <a href="#">Facebook</a> |
+            <a href="#">Twitter</a>
+        </p>
+    </footer>
+</html>
