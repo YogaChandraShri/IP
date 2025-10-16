@@ -3,16 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Virtual Try-On</title>
-    <link rel="stylesheet" href="IP_MINI\static\style.css">
+    
 <style>
+    div {
+            background-color: #ff5c5c;
+            color: white;
+            padding: 15px 0px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            width: 100%;
+            height: 50px;
+        }
+
   body {
     font-family: Arial, sans-serif;
     background: linear-gradient(to right, #ffecd2, #fcb69f);
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 100px;
     min-height: 100vh;
 }
 form, .container {
@@ -21,19 +32,20 @@ form, .container {
     border-radius: 10px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     width: 350px;
+    
     box-sizing: border-box;
 }
 
 h2 {
     text-align: center;
     color: #333333;
-    margin-bottom: 25px;
+    
 }
 
 h3 {
     text-align: center;
     color: #555555;
-    margin-bottom: 15px;
+    
 }
 
 input[type="text"],
@@ -68,7 +80,7 @@ button:hover {
 p {
     text-align: center;
     font-size: 14px;
-    margin-top: 15px;
+    margin-top: 5px;
 }
 
 p a {
@@ -80,24 +92,19 @@ p a:hover {
     text-decoration: underline;
 }
 
-img {
-    display: block;
-    margin: 10px auto;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-}
 footer {
             background-color: #ff5c5c;
             color: white;
             text-align: center;
             padding: 20px;
-            margin-top: 60px;
+            
+            width: 100%;
         }
 
         footer a {
             color: #fff;
             text-decoration: underline;
-            margin: 0 5px;
+            
         }
 
         footer a:hover {
@@ -105,9 +112,10 @@ footer {
         }
 </style>
 </head>
-
+<div>
+    <p style="text-align: left; font-size: 40px;">Click To Wear</p>
+</div>
 <body>
-
 <form action="signup.php" method="POST">
   <h2>Sign Up</h2>
   <input type="text" name="username" placeholder="Username" required><br>
@@ -115,6 +123,7 @@ footer {
   <button type="submit">Create Account</button>
   <p>Already have an account? <a href="login.html">Login</a></p>
 </form>
+</body>
 <footer>
         <p>© 2025 Click to Wear | All Rights Reserved</p>
         <p>
@@ -124,5 +133,4 @@ footer {
             <a href="#">Twitter</a>
         </p>
     </footer>
-</body>
 </html>
